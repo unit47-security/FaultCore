@@ -1,0 +1,9 @@
+FaultCore 0.1.0 report (schema 1.1.0)
+status=complete reason=local_minimum_under_budget
+original size=17 sha256=1707b410658b1198…
+best size=7 sha256=be0bbe0ab32e7c31…
+attempts=52 reductions=5 elapsed=0.847s
+final_started=True final_done=True final_ok=True
+historically_verified=True currently_confirmed=True
+signature=outcome=exit_nonzero|signal=None|exit=77|norm=v2-conservative|stderr=b2088bde34f153e1|stdout=e3b0c44298fc1c14|marker=pattern_abort
+A crash or exit_nonzero outcome is not a confirmed vulnerability. Lab evidence only within the stated limits.

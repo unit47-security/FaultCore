@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "faultcore"
+version = "0.1.0"
+description = "Local crash reproduction, stability check and input minimization for lab programs (UNIT-47)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "UNIT-47" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+faultcore = "faultcore.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["faultcore*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

@@ -1,0 +1,8 @@
+FaultCore 0.1.0 report (schema 1.1.0)
+command=reproduce stable=True reason=None
+interesting=3/3 detail_rows=3
+primary=outcome=exit_nonzero|signal=None|exit=77|norm=v2-conservative|stderr=b2088bde34f153e1|stdout=e3b0c44298fc1c14|marker=pattern_abort
+  run[0] exit_nonzero exit=77 sig=None dur=0.016s trunc=False
+  run[1] exit_nonzero exit=77 sig=None dur=0.016s trunc=False
+  run[2] exit_nonzero exit=77 sig=None dur=0.016s trunc=False
+A crash or exit_nonzero outcome is not a confirmed vulnerability. Lab evidence only within the stated limits.

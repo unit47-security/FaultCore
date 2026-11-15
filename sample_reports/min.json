@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.1.0",
+  "faultcore_version": "0.1.0",
+  "generated_at": "2026-11-15T11:59:05.889701+00:00",
+  "command": "minimize",
+  "argv": [
+    "/usr/bin/python3",
+    "fixtures/crash_on_pattern.py"
+  ],
+  "cwd": "/home/workdir/artifacts/faultcore-final/src",
+  "platform": {
+    "python_version": "3.12.3",
+    "python_implementation": "CPython",
+    "platform": "Linux-6.12.8+-x86_64-with-glibc2.39",
+    "system": "Linux",
+    "machine": "x86_64"
+  },
+  "config": {
+    "timeout_s": 2.0,
+    "max_output_bytes": 65536,
+    "verify_runs": 2,
+    "max_attempts": 200,
+    "max_seconds": 30.0
+  },
+  "disclaimer": "A crash or exit_nonzero outcome is not a confirmed vulnerability. Lab evidence only within the stated limits.",
+  "ressembly_export": {
+    "faultcore_export_version": "0.1-predisposition",
+    "note": "Placeholder schema for a future Ressembly bridge; not functional integration",
+    "fields": [
+      "schema_version",
+      "faultcore_version",
+      "command_argv",
+      "artifacts[].path",
+      "artifacts[].sha256",
+      "artifacts[].role",
+      "crash_signature",
+      "normalization",
+      "repro_params",
+      "status"
+    ]
+  },
+  "command_artifacts": [
+    {
+      "index": 0,
+      "arg": "/usr/bin/python3",
+      "identified": true,
+      "sha256": "e1efa562c2cc2e35521a5c9c9b9939921001ff8ca9708a13ef15ace68cc2ccd7",
+      "size": 8020928,
+      "role": "script_or_binary"
+    },
+    {
+      "index": 1,
+      "arg": "fixtures/crash_on_pattern.py",
+      "identified": true,
+      "sha256": "126a539d4db0f1b9f4268349f880a0575c28232c4ae21023f2cb8b2088175833",
+      "size": 460,
+      "role": "script_or_binary"
+    }
+  ],
+  "input_original": {
+    "size": 17,
+    "sha256": "1707b410658b11985407dd921067acd28f893b725bf71b73e97bb0a729945245"
+  },
+  "input_minimized": {
+    "size": 7,
+    "sha256": "be0bbe0ab32e7c31b529ab12e5193e011077df9ac365d24cf9e8e9a0b3a3ee7c"
+  },
+  "minimize": {
+    "status": "complete",
+    "reason": "local_minimum_under_budget",
+    "attempts": 52,
+    "elapsed_s": 0.8472029019999923,
+    "reductions": 5,
+    "size_trace": [
+      17,
+      16,
+      12,
+      10,
+      8,
+      7
+    ],
+    "notes": [
+      "cleanup_reserve_s=0.8 (wall-clock headroom for kill/join; not counted as attempts)",
+      "no_global_minimum_claim: best under attempt/time budget only"
+    ],
+    "required_signature": "outcome=exit_nonzero|signal=None|exit=77|norm=v2-conservative|stderr=b2088bde34f153e1|stdout=e3b0c44298fc1c14|marker=pattern_abort",
+    "normalization": "v2-conservative",
+    "best_was_verified_when_accepted": true,
+    "best_currently_confirmed": true,
+    "final_verification_started": true,
+    "final_verification_done": true,
+    "final_verification_ok": true,
+    "global_minimum_claimed": false
+  }
+}

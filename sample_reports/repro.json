@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.1.0",
+  "faultcore_version": "0.1.0",
+  "generated_at": "2026-11-15T11:59:03.027966+00:00",
+  "command": "reproduce",
+  "argv": [
+    "/usr/bin/python3",
+    "fixtures/crash_on_pattern.py"
+  ],
+  "cwd": "/home/workdir/artifacts/faultcore-final/src",
+  "platform": {
+    "python_version": "3.12.3",
+    "python_implementation": "CPython",
+    "platform": "Linux-6.12.8+-x86_64-with-glibc2.39",
+    "system": "Linux",
+    "machine": "x86_64"
+  },
+  "config": {
+    "timeout_s": 2.0,
+    "max_output_bytes": 65536,
+    "runs": 3
+  },
+  "disclaimer": "A crash or exit_nonzero outcome is not a confirmed vulnerability. Lab evidence only within the stated limits.",
+  "ressembly_export": {
+    "faultcore_export_version": "0.1-predisposition",
+    "note": "Placeholder schema for a future Ressembly bridge; not functional integration",
+    "fields": [
+      "schema_version",
+      "faultcore_version",
+      "command_argv",
+      "artifacts[].path",
+      "artifacts[].sha256",
+      "artifacts[].role",
+      "crash_signature",
+      "normalization",
+      "repro_params",
+      "status"
+    ]
+  },
+  "command_artifacts": [
+    {
+      "index": 0,
+      "arg": "/usr/bin/python3",
+      "identified": true,
+      "sha256": "e1efa562c2cc2e35521a5c9c9b9939921001ff8ca9708a13ef15ace68cc2ccd7",
+      "size": 8020928,
+      "role": "script_or_binary"
+    },
+    {
+      "index": 1,
+      "arg": "fixtures/crash_on_pattern.py",
+      "identified": true,
+      "sha256": "126a539d4db0f1b9f4268349f880a0575c28232c4ae21023f2cb8b2088175833",
+      "size": 460,
+      "role": "script_or_binary"
+    }
+  ],
+  "reproduce": {
+    "runs": 3,
+    "stable": true,
+    "unstable_reason": null,
+    "interesting_count": 3,
+    "signal_crash_count": 0,
+    "exit_nonzero_count": 3,
+    "timeout_count": 0,
+    "normal_count": 0,
+    "prep_error_count": 0,
+    "primary_signature": "outcome=exit_nonzero|signal=None|exit=77|norm=v2-conservative|stderr=b2088bde34f153e1|stdout=e3b0c44298fc1c14|marker=pattern_abort",
+    "signature_counts": {
+      "outcome=exit_nonzero|signal=None|exit=77|norm=v2-conservative|stderr=b2088bde34f153e1|stdout=e3b0c44298fc1c14|marker=pattern_abort": 3
+    },
+    "runs_detail": [
+      {
+        "index": 0,
+        "outcome": "exit_nonzero",
+        "exit_code": 77,
+        "signal": null,
+        "duration_s": 0.015891076999992038,
+        "signature_key": "outcome=exit_nonzero|signal=None|exit=77|norm=v2-conservative|stderr=b2088bde34f153e1|stdout=e3b0c44298fc1c14|marker=pattern_abort",
+        "normalization": "v2-conservative",
+        "output_truncated": false,
+        "collectors_abandoned": false,
+        "evidence_insufficient": false,
+        "prep_error": null
+      },
+      {
+        "index": 1,
+        "outcome": "exit_nonzero",
+        "exit_code": 77,
+        "signal": null,
+        "duration_s": 0.015723454000010406,
+        "signature_key": "outcome=exit_nonzero|signal=None|exit=77|norm=v2-conservative|stderr=b2088bde34f153e1|stdout=e3b0c44298fc1c14|marker=pattern_abort",
+        "normalization": "v2-conservative",
+        "output_truncated": false,
+        "collectors_abandoned": false,
+        "evidence_insufficient": false,
+        "prep_error": null
+      },
+      {
+        "index": 2,
+        "outcome": "exit_nonzero",
+        "exit_code": 77,
+        "signal": null,
+        "duration_s": 0.01572101400000747,
+        "signature_key": "outcome=exit_nonzero|signal=None|exit=77|norm=v2-conservative|stderr=b2088bde34f153e1|stdout=e3b0c44298fc1c14|marker=pattern_abort",
+        "normalization": "v2-conservative",
+        "output_truncated": false,
+        "collectors_abandoned": false,
+        "evidence_insufficient": false,
+        "prep_error": null
+      }
+    ],
+    "detail_count": 3
+  },
+  "input": {
+    "size": 17,
+    "sha256": "1707b410658b11985407dd921067acd28f893b725bf71b73e97bb0a729945245",
+    "path": "/tmp/fc_seed2.bin"
+  }
+}
