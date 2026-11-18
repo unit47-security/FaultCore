@@ -11,3 +11,8 @@ core.*
 /seed.min
 /min.json
 /min.txt
+
+# Local environment files may contain API keys and other secrets.
+.env
+.env.*
+*.env
